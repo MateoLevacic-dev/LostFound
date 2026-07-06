@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost & Found Croatia</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Tn+5R5p2Bm33K8SFOKPWKwF8r8r1pN7+tYhdGWAqPqQxBuG6zI6M3ehAz3pX8pP1A+HeF2bB+zVZOkT1vX4qYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body data-page="home">
+  <header class="site-header glass-card">
+    <div class="brand">
+      <div class="logo-mark"><i class="fas fa-compass"></i></div>
+      <div>
+        <h1>Lost & Found Croatia</h1>
+        <p>Pronađimo izgubljene stvari zajedno.</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Početna</a>
+      <a href="lost-items.html">Izgubljeno</a>
+      <a href="found-items.html">Pronađeno</a>
+      <a href="create-post.html">Nova objava</a>
+      <a href="profile.html">Profil</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" aria-label="Promijeni temu"><i class="fas fa-moon"></i></button>
+      <a href="login.html" class="button outline">Prijavi se</a>
+      <a href="register.html" class="button">Registriraj se</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <span class="eyebrow">Sigurno. Lokalno. Brzo.</span>
+        <h2>Tražite ili objavite izgubljeni predmet s povjerenjem</h2>
+        <p>Lost & Found Croatia je moderan most između vlasnika i pronalazača, s intuitivnim sučeljem i realnim statusima.</p>
+        <div class="hero-buttons">
+          <a href="login.html" class="button">Prijavi se</a>
+          <a href="register.html" class="button outline">Registriraj se</a>
+          <a href="lost-items.html" class="button ghost">Pregledaj objave</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card glass-card">
+          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80" alt="Lost and found illustration" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+      <div class="section-header">
+        <p class="section-tag">Kako radi</p>
+        <h3>Jednostavno objavi, prati i pronađi</h3>
+      </div>
+      <div class="grid-3 cards-grid">
+        <article class="info-card glass-card">
+          <i class="fas fa-upload"></i>
+          <h4>Objavi predmet</h4>
+          <p>Dodajte detalje i fotografiju za izgubljeni ili pronađeni predmet.</p>
+        </article>
+        <article class="info-card glass-card">
+          <i class="fas fa-search"></i>
+          <h4>Pretraži odmah</h4>
+          <p>Filtriraj po kategoriji, gradu, datumu i statusu.</p>
+        </article>
+        <article class="info-card glass-card">
+          <i class="fas fa-handshake"></i>
+          <h4>Kontaktiraj vlasnika</h4>
+          <p>Pošaljite poruku i koordinirajte povratak predmeta.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="statistics-section glass-card">
+      <div class="section-header">
+        <p class="section-tag">Statistika</p>
+        <h3>Uvidi na prvi pogled</h3>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span>230+</span>
+          <p>Pronađenih predmeta</p>
+        </div>
+        <div class="stat-card">
+          <span>480+</span>
+          <p>Izgubljenih objava</p>
+        </div>
+        <div class="stat-card">
+          <span>95%</span>
+          <p>Uspješnih povrata</p>
+        </div>
+        <div class="stat-card">
+          <span>99%</span>
+          <p>Zadovoljnih korisnika</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-section" id="latest">
+      <div class="section-header">
+        <p class="section-tag">Najnoviji oglasi</p>
+        <h3>Pregledajte najnovije objave u realnom vremenu</h3>
+      </div>
+      <div id="latest-posts" class="cards-grid"></div>
+    </section>
+
+    <section class="categories-section">
+      <div class="section-header">
+        <p class="section-tag">Kategorije</p>
+        <h3>Brzo pronađite svoju kategoriju</h3>
+      </div>
+      <div class="category-grid">
+        <a href="lost-items.html?category=Mobiteli" class="category-pill">Mobiteli</a>
+        <a href="lost-items.html?category=Novčanici" class="category-pill">Novčanici</a>
+        <a href="lost-items.html?category=Ključevi" class="category-pill">Ključevi</a>
+        <a href="lost-items.html?category=Dokumenti" class="category-pill">Dokumenti</a>
+        <a href="lost-items.html?category=Kućni ljubimci" class="category-pill">Kućni ljubimci</a>
+        <a href="lost-items.html?category=Elektronika" class="category-pill">Elektronika</a>
+        <a href="lost-items.html?category=Odjeća" class="category-pill">Odjeća</a>
+        <a href="lost-items.html?category=Torbe" class="category-pill">Torbe</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer glass-card">
+    <div class="footer-grid">
+      <div>
+        <h4>Lost & Found Croatia</h4>
+        <p>Sigurna lokalna platforma za pronalazak izgubljenih stvari u Hrvatskoj.</p>
+      </div>
+      <div>
+        <h5>Brzi linkovi</h5>
+        <a href="about.html">O nama</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="settings.html">Postavke</a>
+      </div>
+      <div>
+        <h5>Podrška</h5>
+        <a href="#">ČPP</a>
+        <a href="#">Uvjeti korištenja</a>
+        <a href="#">Privatnost</a>
+      </div>
+      <div>
+        <h5>Društvene mreže</h5>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Lost & Found Croatia. Sva prava pridržana.</p>
+  </footer>
+
+  <button class="scroll-top" aria-label="Vrati se gore"><i class="fas fa-chevron-up"></i></button>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

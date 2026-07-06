@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postavke - Lost & Found Croatia</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Tn+5R5p2Bm33K8SFOKPWKwF8r8r1pN7+tYhdGWAqPqQxBuG6zI6M3ehAz3pX8pP1A+HeF2bB+zVZOkT1vX4qYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body data-page="settings">
+  <header class="site-header glass-card">
+    <div class="brand"><i class="fas fa-compass"></i>Lost & Found Croatia</div>
+    <nav class="main-nav"><a href="index.html">Početna</a><a href="lost-items.html">Izgubljeno</a><a href="found-items.html">Pronađeno</a><a href="dashboard.html">Upravljačka ploča</a><a href="profile.html">Profil</a></nav>
+    <div class="header-actions"><button class="theme-toggle" aria-label="Promijeni temu"><i class="fas fa-moon"></i></button></div>
+  </header>
+
+  <main class="page-section settings-page glass-card">
+    <section class="section-header">
+      <p class="section-tag">Postavke</p>
+      <h3>Upravljajte svojim računom i preferencijama</h3>
+    </section>
+
+    <section class="settings-grid">
+      <article class="settings-card glass-card">
+        <h4>Promjena lozinke</h4>
+        <form id="password-form" class="settings-form" novalidate>
+          <div class="form-group">
+            <label for="current-password">Trenutna lozinka</label>
+            <input type="password" id="current-password" required />
+          </div>
+          <div class="form-group">
+            <label for="new-password">Nova lozinka</label>
+            <input type="password" id="new-password" required minlength="6" />
+          </div>
+          <div class="form-group">
+            <label for="confirm-new-password">Potvrdi lozinku</label>
+            <input type="password" id="confirm-new-password" required minlength="6" />
+          </div>
+          <button type="submit" class="button">Spremi promjene</button>
+        </form>
+      </article>
+
+      <article class="settings-card glass-card">
+        <h4>Izgled i obavijesti</h4>
+        <div class="toggle-row">
+          <span>Tamna tema</span>
+          <label class="switch"><input type="checkbox" id="theme-switch" /><span class="slider"></span></label>
+        </div>
+        <div class="toggle-row">
+          <span>Obavijesti</span>
+          <label class="switch"><input type="checkbox" id="notifications-switch" checked /><span class="slider"></span></label>
+        </div>
+        <div class="form-group">
+          <label for="language-select">Jezik</label>
+          <select id="language-select">
+            <option value="hr">Hrvatski</option>
+            <option value="en">Engleski</option>
+          </select>
+        </div>
+      </article>
+
+      <article class="settings-card glass-card">
+        <h4>Izvoz podataka</h4>
+        <p>Preuzmite svoje korisničke podatke i sve objave u JSON formatu.</p>
+        <button id="export-data" class="button outline">Izvezi podatke</button>
+      </article>
+      <article class="settings-card glass-card danger-card">
+        <h4>Brisanje računa</h4>
+        <p>Ova akcija trajno briše vaš račun i sve objave.</p>
+        <button id="delete-account" class="button ghost">Obriši račun</button>
+      </article>
+    </section>
+  </main>
+
+  <button class="scroll-top" aria-label="Vrati se gore"><i class="fas fa-chevron-up"></i></button>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
