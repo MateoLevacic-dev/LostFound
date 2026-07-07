@@ -1,0 +1,161 @@
+.info-card,
+.post-card,
+.stat-card,
+.admin-card,
+.contact-card,
+.settings-card,
+.detail-block {
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.75rem;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.06);
+}
+
+.info-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.info-card i,
+.quick-action i {
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+.info-card h4,
+.quick-action span {
+  margin: 0;
+}
+
+.quick-action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.04);
+}
+
+.quick-action:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.stat-card {
+  padding: 1.8rem;
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+.stat-card span {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.post-card {
+  display: grid;
+  gap: 1rem;
+  min-height: 280px;
+}
+
+.post-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.post-card .post-meta,
+.post-card .post-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.post-card h4 {
+  margin: 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(67, 83, 255, 0.16);
+  color: var(--text);
+  font-size: 0.88rem;
+}
+
+.gallery-list {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.gallery-list button {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  background: transparent;
+  color: var(--text);
+  padding: 0.75rem 1rem;
+}
+
+.contact-card ul,
+.admin-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.contact-card ul li,
+.admin-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
+.pagination-button {
+  min-width: 2.7rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  padding: 0.65rem 0.85rem;
+  border-radius: 12px;
+}
+
+.pagination-button.active {
+  background: var(--primary);
+  color: white;
+}
+
+.danger-card {
+  border-color: rgba(255, 92, 122, 0.2);
+}
+
+.danger-card .button.ghost {
+  color: var(--danger);
+  border-color: rgba(255, 92, 122, 0.4);
+}
+
+@media (max-width: 860px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}

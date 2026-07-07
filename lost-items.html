@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Izgubljeno - Lost & Found Croatia</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Tn+5R5p2Bm33K8SFOKPWKwF8r8r1pN7+tYhdGWAqPqQxBuG6zI6M3ehAz3pX8pP1A+HeF2bB+zVZOkT1vX4qYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body data-page="lost-items">
+  <header class="site-header glass-card">
+    <div class="brand"><i class="fas fa-compass"></i>Lost & Found Croatia</div>
+    <nav class="main-nav"><a href="index.html">Početna</a><a href="found-items.html">Pronađeno</a><a href="create-post.html">Nova objava</a><a href="dashboard.html">Upravljačka ploča</a><a href="profile.html">Profil</a></nav>
+    <div class="header-actions"><button class="theme-toggle" aria-label="Promijeni temu"><i class="fas fa-moon"></i></button></div>
+  </header>
+
+  <main class="page-section">
+    <section class="section-header glass-card">
+      <div>
+        <p class="section-tag">Izgubljeno</p>
+        <h3>Pregledajte sve korisničke objave</h3>
+      </div>
+      <div class="filter-group">
+        <input type="search" id="search-input" placeholder="Pretraži po nazivu, gradu ili kategoriji" />
+        <select id="status-filter">
+          <option value="all">Svi</option>
+          <option value="lost" selected>Izgubljeno</option>
+          <option value="found">Pronađeno</option>
+        </select>
+        <select id="time-filter">
+          <option value="all">Sve</option>
+          <option value="today">Danas</option>
+          <option value="week">Ovaj tjedan</option>
+          <option value="month">Ovaj mjesec</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="post-list" class="cards-grid"></section>
+    <div id="pagination" class="pagination"></div>
+  </main>
+
+  <footer class="site-footer compact">
+    <p>© 2026 Lost & Found Croatia</p>
+  </footer>
+
+  <button class="scroll-top" aria-label="Vrati se gore"><i class="fas fa-chevron-up"></i></button>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

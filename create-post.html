@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova objava - Lost & Found Croatia</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Tn+5R5p2Bm33K8SFOKPWKwF8r8r1pN7+tYhdGWAqPqQxBuG6zI6M3ehAz3pX8pP1A+HeF2bB+zVZOkT1vX4qYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body data-page="create-post">
+  <header class="site-header glass-card">
+    <div class="brand"><i class="fas fa-compass"></i>Lost & Found Croatia</div>
+    <nav class="main-nav"><a href="index.html">Početna</a><a href="lost-items.html">Izgubljeno</a><a href="found-items.html">Pronađeno</a><a href="dashboard.html">Upravljačka ploča</a><a href="profile.html">Profil</a></nav>
+    <div class="header-actions"><button class="theme-toggle" aria-label="Promijeni temu"><i class="fas fa-moon"></i></button></div>
+  </header>
+
+  <main class="page-section glass-card create-post-page">
+    <div class="section-header">
+      <p class="section-tag">Nova objava</p>
+      <h3>Dodajte svoj izgubljeni ili pronađeni predmet</h3>
+    </div>
+    <form id="post-form" class="post-form" novalidate>
+      <div class="form-grid-2">
+        <div class="form-group radio-group">
+          <label><input type="radio" name="type" value="lost" checked /> Izgubljeno</label>
+          <label><input type="radio" name="type" value="found" /> Pronađeno</label>
+        </div>
+        <div class="form-group">
+          <label for="item-category">Kategorija</label>
+          <select id="item-category" name="category" required>
+            <option value="">Odaberite kategoriju</option>
+            <option>Mobiteli</option>
+            <option>Novčanici</option>
+            <option>Ključevi</option>
+            <option>Dokumenti</option>
+            <option>Kućni ljubimci</option>
+            <option>Elektronika</option>
+            <option>Odjeća</option>
+            <option>Torbe</option>
+            <option>Nakit</option>
+            <option>Bicikli</option>
+            <option>Satovi</option>
+            <option>Ostalo</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="item-title">Naziv predmeta</label>
+        <input type="text" id="item-title" name="title" placeholder="Npr. crni novčanik" required />
+      </div>
+      <div class="form-group">
+        <label for="item-description">Opis</label>
+        <textarea id="item-description" name="description" rows="4" placeholder="Dodajte što više informacija..." required></textarea>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label for="item-date">Datum</label>
+          <input type="date" id="item-date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label for="item-color">Boja</label>
+          <input type="text" id="item-color" name="color" placeholder="Crna" required />
+        </div>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label for="item-brand">Marka</label>
+          <input type="text" id="item-brand" name="brand" placeholder="Apple, Samsung..." />
+        </div>
+        <div class="form-group">
+          <label for="item-location">Lokacija</label>
+          <input type="text" id="item-location" name="location" placeholder="Trg bana Jelačića" required />
+        </div>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label for="item-city">Grad</label>
+          <input type="text" id="item-city" name="city" placeholder="Zagreb" required />
+        </div>
+        <div class="form-group">
+          <label for="item-address">Adresa</label>
+          <input type="text" id="item-address" name="address" placeholder="Ulica 12" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="item-image">Fotografija (URL)</label>
+        <input type="url" id="item-image" name="image" placeholder="https://..." required />
+      </div>
+      <div class="form-group">
+        <label for="item-info">Dodatne informacije</label>
+        <textarea id="item-info" name="additionalInfo" rows="3" placeholder="Primjer: nosi plavu torbicu..."></textarea>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label for="contact-phone">Kontakt telefon</label>
+          <input type="tel" id="contact-phone" name="contactPhone" placeholder="091 123 4567" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Kontakt email</label>
+          <input type="email" id="contact-email" name="contactEmail" placeholder="kontakt@primjer.com" required />
+        </div>
+      </div>
+      <div class="form-group gps-group">
+        <button id="detect-location" type="button" class="button outline"><i class="fas fa-location-crosshairs"></i> Dohvati GPS</button>
+        <p class="hint">Ako preglednik dopušta, spremit ćemo GPS koordinate za bolju vidljivost.</p>
+      </div>
+      <button type="submit" class="button">Objavi</button>
+    </form>
+  </main>
+
+  <button class="scroll-top" aria-label="Vrati se gore"><i class="fas fa-chevron-up"></i></button>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
