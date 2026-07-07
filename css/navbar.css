@@ -1,0 +1,103 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  transition: background 0.22s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255,255,255,0.08);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.auth-page,
+.profile-page,
+.settings-page,
+.contact-page,
+.item-page {
+  width: min(1200px, 92vw);
+  margin: 0 auto 2rem;
+}
+
+.auth-page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 7rem);
+}
+
+.auth-panel {
+  width: min(720px, 100%);
+  padding: 2rem;
+}
+
+.auth-form .form-group,
+.post-form .form-group,
+.settings-form .form-group,
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.auth-hero {
+  margin-bottom: 1.5rem;
+}
+
+.auth-hero h2 {
+  margin: 0 0 0.5rem;
+}
+
+.small-note {
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+.checkbox-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+
+.filter-group {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(67, 83, 255, 0.14);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+}
+
+@media (max-width: 840px) {
+  .main-nav {
+    justify-content: center;
+  }
+
+  .filter-group {
+    grid-template-columns: 1fr;
+  }
+}
